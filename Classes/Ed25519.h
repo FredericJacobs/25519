@@ -12,4 +12,7 @@
 
 @interface Ed25519 : NSObject
 
++(NSData*)sign:(NSData*)msg withKeyPair:(ECKeyPair*)keyPair;
++(BOOL)verifySignature:(NSData*)signature publicKey:(NSData*)pubKey msg:(NSData*)msg;
+
 @end

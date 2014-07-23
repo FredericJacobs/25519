@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = '25519'
-  spec.version      = '1.0'
+  spec.version      = '1.1'
   spec.license      = { :type => 'GPLv3' }
   spec.homepage     = 'https://github.com/FredericJacobs/25519'
   spec.preserve_path = 'Sources/ed25519/**/*.{c,h}'
