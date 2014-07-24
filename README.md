@@ -46,7 +46,7 @@ API reference is available on [CocoaDocs](http://cocoadocs.org/docsets/25519).
 Add this line to your `Podfile`
 
 ```
-pod '25519', '~> 1.1'
+pod '25519', '~> version number'
 ```
 
 ## License
