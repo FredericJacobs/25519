@@ -19,14 +19,12 @@ extern void curve25519_sign(unsigned char* signature_out,
                             unsigned char* curve25519_privkey,
                             unsigned char* msg, unsigned long msg_len);
 
-
 @implementation ECKeyPair
 
 -(void)encodeWithCoder:(NSCoder *)coder {
     [coder encodeBytes:self->publicKey length:ECCKeyLength forKey:TSECKeyPairPublicKey];
     [coder encodeBytes:self->privateKey length:ECCKeyLength forKey:TSECKeyPairPrivateKey];
 }
-
 
 -(id)initWithCoder:(NSCoder *)coder {
     self = [super init];
@@ -100,7 +98,6 @@ extern void curve25519_sign(unsigned char* signature_out,
     return [NSData dataWithBytes:sharedSecret length:32];
 }
 
-
 @end
 
 @implementation Curve25519
@@ -108,7 +105,6 @@ extern void curve25519_sign(unsigned char* signature_out,
 +(ECKeyPair*)generateKeyPair{
     return [ECKeyPair generateKeyPair];
 }
-
 
 +(NSData*)generateSharedSecretFromPublicKey:(NSData *)theirPublicKey andKeyPair:(ECKeyPair *)keyPair{
     return [keyPair generateSharedSecretFromPublicKey:theirPublicKey];

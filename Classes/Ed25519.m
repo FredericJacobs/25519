@@ -9,17 +9,19 @@
 #import "Ed25519.h"
 #import "Curve25519.h"
 
+@interface ECKeyPair ()
+-(NSData*) sign:(NSData*)data;
+@end
+
 extern int curve25519_verify(unsigned char* signature,
                       unsigned char* curve25519_pubkey,
                       unsigned char* msg, unsigned long msg_len);
-
 
 @implementation Ed25519
 
 +(NSData*)sign:(NSData*)msg withKeyPair:(ECKeyPair*)keyPair{
     return [keyPair sign:msg];
 }
-
 
 +(BOOL)verifySignature:(NSData*)signature publicKey:(NSData*)pubKey msg:(NSData*)msg{
     
@@ -50,7 +52,5 @@ extern int curve25519_verify(unsigned char* signature,
     
     return success;
 }
-
-
 
 @end
