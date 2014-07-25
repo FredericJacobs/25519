@@ -15,9 +15,10 @@ NSString * const TSECKeyPairPreKeyId    = @"TSECKeyPairPreKeyId";
 
 extern void curve25519_donna(unsigned char *output, const unsigned char *a, const unsigned char *b);
 
-extern void curve25519_sign(unsigned char* signature_out,
-                            unsigned char* curve25519_privkey,
-                            unsigned char* msg, unsigned long msg_len);
+extern void curve25519_sign(unsigned char* signature_out, /* 64 bytes */
+                     const unsigned char* curve25519_privkey, /* 32 bytes */
+                     const unsigned char* msg, const unsigned long msg_len,
+                     const unsigned char* random); /* 64 bytes */
 
 @implementation ECKeyPair
 
@@ -69,15 +70,14 @@ extern void curve25519_sign(unsigned char* signature_out,
 }
 
 -(NSData*) sign:(NSData*)data{
-    NSUInteger msg_len = [data length];
-    uint8_t signatureBuffer[ECCSignatureLength];
+    Byte signatureBuffer[ECCSignatureLength];
+    NSData *randomBytes = [Randomness generateRandomBytes:64];
     
-    uint8_t message[msg_len];
-    [data getBytes:signatureBuffer length:msg_len];
+    curve25519_sign(signatureBuffer, self->privateKey, [data bytes], [data length], [randomBytes bytes]);
     
-    curve25519_sign(signatureBuffer, self->privateKey, message, msg_len);
+    NSData *signature = [NSData dataWithBytes:signatureBuffer length:ECCSignatureLength];
     
-    return [NSData dataWithBytes:signatureBuffer length:ECCSignatureLength];
+    return signature;
 }
 
 -(NSData*) generateSharedSecretFromPublicKey:(NSData*)theirPublicKey {

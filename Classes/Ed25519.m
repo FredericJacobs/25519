@@ -13,9 +13,9 @@
 -(NSData*) sign:(NSData*)data;
 @end
 
-extern int curve25519_verify(unsigned char* signature,
-                      unsigned char* curve25519_pubkey,
-                      unsigned char* msg, unsigned long msg_len);
+extern int curve25519_verify(const unsigned char* signature, /* 64 bytes */
+                      const unsigned char* curve25519_pubkey, /* 32 bytes */
+                      const unsigned char* msg, const unsigned long msg_len);
 
 @implementation Ed25519
 
@@ -37,18 +37,7 @@ extern int curve25519_verify(unsigned char* signature,
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Signature isn't 64 bytes" userInfo:nil];
     }
     
-    NSUInteger msg_len = [msg length];
-    
-    uint8_t publicKeyBuffer[ECCKeyLength];
-    [pubKey getBytes:publicKeyBuffer length:ECCKeyLength];
-    
-    uint8_t messageBuffer[[msg length]];
-    [msg getBytes:messageBuffer length:[msg length]];
-    
-    uint8_t signatureBuffer[ECCSignatureLength];
-    [signature getBytes:signatureBuffer length:[signature length]];
-    
-    BOOL success = (curve25519_verify(signatureBuffer, publicKeyBuffer, messageBuffer, msg_len) == 0);
+    BOOL success = (curve25519_verify([signature bytes], [pubKey bytes], [msg bytes], [msg length]) == 0);
     
     return success;
 }

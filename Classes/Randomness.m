@@ -15,7 +15,7 @@
     NSMutableData* randomBytes = [NSMutableData dataWithLength:numberBytes];
     int err = 0;
     err = SecRandomCopyBytes(kSecRandomDefault,numberBytes,[randomBytes mutableBytes]);
-    if(err != noErr) {
+    if(err != noErr && [randomBytes length] != numberBytes) {
         @throw [NSException exceptionWithName:@"random problem" reason:@"problem generating the random " userInfo:nil];
     }
     return randomBytes;

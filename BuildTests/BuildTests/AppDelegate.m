@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 Frederic Jacobs. All rights reserved.
 //
 
+#import "Randomness.h"
+#import "Ed25519.h"
+#import "Curve25519.h"
 #import "AppDelegate.h"
 
 @implementation AppDelegate
@@ -16,6 +19,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
