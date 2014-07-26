@@ -1,6 +1,4 @@
 language: objective-c
 xcode_project: BuildTests/BuildTests.xcodeproj
 xcode_scheme: BuildTestsTests
-
-before_script:
-- ./.travisScript.sh
+xcode_sdk: iphonesimulator
