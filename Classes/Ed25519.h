@@ -14,24 +14,24 @@
 /**
  *  ed25519 signature of a message with a curve25519 key pair.
  *
- *  @param msg     message to be signed.
+ *  @param data    data to be signed.
  *  @param keyPair curve25519 32-byte key pair.
  *
  *  @return The ed25519 64-bytes signature.
  */
 
-+(NSData*)sign:(NSData*)msg withKeyPair:(ECKeyPair*)keyPair;
++(NSData*)sign:(NSData*)data withKeyPair:(ECKeyPair*)keyPair;
 
 /**
  *  Verify ed25519 signature with 32-bytes Curve25519 key pair. Throws an NSInvalid
  *
  *  @param signature ed25519 64-byte signature.
  *  @param pubKey    public key of the signer.
- *  @param msg       message to be checked against the signature.
+ *  @param data      data to be checked against the signature.
  *
  *  @return Returns TRUE if the signature is valid, false if it's not.
  */
 
-+(BOOL)verifySignature:(NSData*)signature publicKey:(NSData*)pubKey msg:(NSData*)msg;
++(BOOL)verifySignature:(NSData*)signature publicKey:(NSData*)pubKey data:(NSData*)data;
 
 @end

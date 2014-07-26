@@ -18,7 +18,7 @@
     if(err != noErr && [randomBytes length] != numberBytes) {
         @throw [NSException exceptionWithName:@"random problem" reason:@"problem generating the random " userInfo:nil];
     }
-    return randomBytes;
+    return [NSData dataWithData:randomBytes];
 }
 
 @end

@@ -19,14 +19,19 @@ extern int curve25519_verify(const unsigned char* signature, /* 64 bytes */
 
 @implementation Ed25519
 
-+(NSData*)sign:(NSData*)msg withKeyPair:(ECKeyPair*)keyPair{
-    return [keyPair sign:msg];
++(NSData*)sign:(NSData*)data withKeyPair:(ECKeyPair*)keyPair{
+    
+    if ([data length] < 1) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Data needs to be at least one byte" userInfo:nil];
+    }
+    
+    return [keyPair sign:data];
 }
 
-+(BOOL)verifySignature:(NSData*)signature publicKey:(NSData*)pubKey msg:(NSData*)msg{
++(BOOL)verifySignature:(NSData*)signature publicKey:(NSData*)pubKey data:(NSData*)data{
     
-    if ([msg length]<1) {
-        return FALSE;
+    if ([data length] < 1) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Data needs to be at least one byte" userInfo:nil];
     }
     
     if ([pubKey length] != ECCKeyLength) {
@@ -37,7 +42,7 @@ extern int curve25519_verify(const unsigned char* signature, /* 64 bytes */
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Signature isn't 64 bytes" userInfo:nil];
     }
     
-    BOOL success = (curve25519_verify([signature bytes], [pubKey bytes], [msg bytes], [msg length]) == 0);
+    BOOL success = (curve25519_verify([signature bytes], [pubKey bytes], [data bytes], [data length]) == 0);
     
     return success;
 }

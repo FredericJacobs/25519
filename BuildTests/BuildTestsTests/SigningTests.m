@@ -28,59 +28,37 @@
     [super tearDown];
 }
 
-- (void)randomizedTest
-{
+- (void)testingRandom{
+    for (int i = 1; i < 10000; i++) {
+        
+        ECKeyPair *key = [Curve25519 generateKeyPair];
+        
+        NSData *data = [Randomness generateRandomBytes:i+16];
+        
+        NSData *signature = [Ed25519 sign:data withKeyPair:key];
+        
+        if (![Ed25519 verifySignature:signature publicKey:[key publicKey] data:data]) {
+            XCTAssert(false, @"Failed to verify signature while performing testing");
+            return;
+        }
+        
+    }
+}
+
+- (void)testingIdentityKeyStyle{
     for (int i = 0; i < 10000; i++) {
         
-        NSLog(@"Passed test");
-        
         ECKeyPair *key = [Curve25519 generateKeyPair];
         
-        int rand = random()%10000;
-        
-        NSLog(@"%d",rand);
-        
-        NSData *data = [Randomness generateRandomBytes:16];
+        NSData *data = [Randomness generateRandomBytes:32];
         
         NSData *signature = [Ed25519 sign:data withKeyPair:key];
         
-        XCTAssert([Ed25519 verifySignature:signature publicKey:[key publicKey] msg:data], @"Error in key verification");
-        
+        if (![Ed25519 verifySignature:signature publicKey:[key publicKey] data:data]) {
+            XCTAssert(false, @"Verifying a signed 32-byte identity key failed");
+            return;
+        }
     }
-    
-}
-
-- (void)testingSmallDataSizes{
-    
-    for (int i = 1; i < 100; i++) {
-        
-        ECKeyPair *key = [Curve25519 generateKeyPair];
-        
-        int randomNumber = random()%i;
-        
-        NSData *data = [Randomness generateRandomBytes:randomNumber];
-        
-        NSData *signature = [Ed25519 sign:data withKeyPair:key];
-        
-        XCTAssert([Ed25519 verifySignature:signature publicKey:[key publicKey] msg:data], @"Error in key verification");
-        
-    }
-}
-
-- (void)testingLargeDataSizes{
-   
-    for (int i = 1; i < 100; i++) {
-        
-        ECKeyPair *key = [Curve25519 generateKeyPair];
-                                                       
-        NSData *data = [Randomness generateRandomBytes:500000000]; // 500mb
-        
-        NSData *signature = [Ed25519 sign:data withKeyPair:key];
-        
-        XCTAssert([Ed25519 verifySignature:signature publicKey:[key publicKey] msg:data], @"Error in key verification");
-        
-    }
-    
 }
 
 @end
