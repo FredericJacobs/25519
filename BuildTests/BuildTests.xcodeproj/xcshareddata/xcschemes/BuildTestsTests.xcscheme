@@ -23,6 +23,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B6EC0955197F559E0070F844"
+            BuildableName = "BuildTests.app"
+            BlueprintName = "BuildTests"
+            ReferencedContainer = "container:BuildTests.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -33,6 +42,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B6EC0955197F559E0070F844"
+            BuildableName = "BuildTests.app"
+            BlueprintName = "BuildTests"
+            ReferencedContainer = "container:BuildTests.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
