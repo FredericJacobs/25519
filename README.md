@@ -1,4 +1,4 @@
-25519
+25519 [![Build Status](https://travis-ci.org/FredericJacobs/25519.svg?branch=master)](https://travis-ci.org/FredericJacobs/25519)
 =====
 
 Curve25519 is a fast and secure curve used for key agreement. Unfortunately, it does not support signing out of the box. This pod translates the point curves to do ed25519 signing with curve25519 keys.
