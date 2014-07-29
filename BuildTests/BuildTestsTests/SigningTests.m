@@ -45,6 +45,24 @@
     }
 }
 
+-(void)testingSmallerThan17Bytes{
+    for (int i = 1; i < 10000; i++) {
+        
+        ECKeyPair *key = [Curve25519 generateKeyPair];
+        
+        NSData *data = [Randomness generateRandomBytes:i+1];
+        
+        NSData *signature = [Ed25519 sign:data withKeyPair:key];
+        
+        if (![Ed25519 verifySignature:signature publicKey:[key publicKey] data:data]) {
+            XCTAssert(false, @"Failed to verify signature while performing testing");
+            return;
+        }
+        
+    }
+
+}
+
 - (void)testingIdentityKeyStyle{
     for (int i = 0; i < 10000; i++) {
         

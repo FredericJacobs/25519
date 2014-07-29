@@ -7,7 +7,7 @@ void curve25519_keygen(unsigned char* curve25519_pubkey_out,
                        const unsigned char* curve25519_privkey_in)
 {
   ge_p3 ed; /* Ed25519 pubkey point */
-  fe ed_y_plus_one, one_minus_ed_y, inv_one_minus_ed_y;
+  fe ed_y, ed_y_plus_one, one_minus_ed_y, inv_one_minus_ed_y;
   fe mont_x;
 
   /* Perform a fixed-base multiplication of the Edwards base point,
@@ -31,30 +31,34 @@ void curve25519_keygen(unsigned char* curve25519_pubkey_out,
   fe_tobytes(curve25519_pubkey_out, mont_x);
 }
 
-void curve25519_sign(unsigned char* signature_out,
-                     const unsigned char* curve25519_privkey,
-                     const unsigned char* msg, const unsigned long msg_len,
-                     const unsigned char* random)
+int curve25519_sign(unsigned char* signature_out,
+                    const unsigned char* curve25519_privkey,
+                    const unsigned char* msg, const unsigned long msg_len,
+                    const unsigned char* random)
 {
   ge_p3 ed_pubkey_point; /* Ed25519 pubkey point */
   unsigned char ed_pubkey[32]; /* Ed25519 encoded pubkey */
-  unsigned char sigbuf[msg_len + 64]; /* working buffer */
-  unsigned long long sigbuf_out_len = 0;
+  unsigned char sigbuf[MAX_MSG_LEN + 128]; /* working buffer */
   unsigned char sign_bit = 0;
+
+  if (msg_len > MAX_MSG_LEN) {
+    memset(signature_out, 0, 64);
+    return -1;
+  }
 
   /* Convert the Curve25519 privkey to an Ed25519 public key */
   ge_scalarmult_base(&ed_pubkey_point, curve25519_privkey);
   ge_p3_tobytes(ed_pubkey, &ed_pubkey_point);
   sign_bit = ed_pubkey[31] & 0x80;
 
-
   /* Perform an Ed25519 signature with explicit private key */
-  crypto_sign_modified(sigbuf, &sigbuf_out_len, msg, msg_len, curve25519_privkey,
+  crypto_sign_modified(sigbuf, msg, msg_len, curve25519_privkey,
                        ed_pubkey, random);
-  memmove(signature_out, sigbuf,  64);
+  memmove(signature_out, sigbuf, 64);
 
   /* Encode the sign bit into signature (in unused high bit of S) */
    signature_out[63] |= sign_bit;
+   return 0;
 }
 
 int curve25519_verify(const unsigned char* signature,
@@ -66,8 +70,12 @@ int curve25519_verify(const unsigned char* signature,
   fe ed_y;
   unsigned char ed_pubkey[32];
   unsigned long long some_retval;
-  unsigned char verifybuf[msg_len + 64]; /* working buffer */
-  unsigned char verifybuf2[msg_len + 64]; /* working buffer #2 */
+  unsigned char verifybuf[MAX_MSG_LEN + 64]; /* working buffer */
+  unsigned char verifybuf2[MAX_MSG_LEN + 64]; /* working buffer #2 */
+
+  if (msg_len > MAX_MSG_LEN) {
+    return -1;
+  }
 
   /* Convert the Curve25519 public key into an Ed25519 public key.  In
      particular, convert Curve25519's "montgomery" x-coordinate into an
