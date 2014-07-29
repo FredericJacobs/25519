@@ -48,6 +48,9 @@ Add this line to your `Podfile`
 ```
 pod '25519', '~> version number'
 ```
+## Cryptographic Implementations
+
+The Curve25519 key pair and ECDH is done with [Adam Langley](https://www.imperialviolet.org/)’s [curve25519-donna](https://github.com/agl/curve25519-donna). [The point conversion algorithm](https://www.github.com/trevp/ref10_extract) was written by the inimitable [Trevor Perrin](http://trevp.net/).
 
 ## License
 
