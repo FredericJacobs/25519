@@ -15,7 +15,7 @@ NSString * const TSECKeyPairPreKeyId    = @"TSECKeyPairPreKeyId";
 
 extern void curve25519_donna(unsigned char *output, const unsigned char *a, const unsigned char *b);
 
-extern void curve25519_sign(unsigned char* signature_out, /* 64 bytes */
+extern int  curve25519_sign(unsigned char* signature_out, /* 64 bytes */
                      const unsigned char* curve25519_privkey, /* 32 bytes */
                      const unsigned char* msg, const unsigned long msg_len,
                      const unsigned char* random); /* 64 bytes */
@@ -73,7 +73,9 @@ extern void curve25519_sign(unsigned char* signature_out, /* 64 bytes */
     Byte signatureBuffer[ECCSignatureLength];
     NSData *randomBytes = [Randomness generateRandomBytes:64];
     
-    curve25519_sign(signatureBuffer, self->privateKey, [data bytes], [data length], [randomBytes bytes]);
+    if(curve25519_sign(signatureBuffer, self->privateKey, [data bytes], [data length], [randomBytes bytes]) == -1 ){
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Message couldn't be signed." userInfo:nil];
+    }
     
     NSData *signature = [NSData dataWithBytes:signatureBuffer length:ECCSignatureLength];
     
@@ -85,7 +87,7 @@ extern void curve25519_sign(unsigned char* signature_out, /* 64 bytes */
     
     if ([theirPublicKey length] != 32) {
         NSLog(@"Key does not contain 32 bytes");
-        @throw [NSException exceptionWithName:@"Invalid argument" reason:@" The supplied public key does not contain 32 bytes" userInfo:nil];
+        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"The supplied public key does not contain 32 bytes" userInfo:nil];
     }
     
     sharedSecret = malloc(32);

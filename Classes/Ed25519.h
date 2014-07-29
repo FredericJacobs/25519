@@ -9,12 +9,14 @@
 
 @class ECKeyPair;
 
+#define ED25519_SIGN_MAX 256
+
 @interface Ed25519 : NSObject
 
 /**
  *  ed25519 signature of a message with a curve25519 key pair.
  *
- *  @param data    data to be signed.
+ *  @param data    data to be signed ([1,256] bytes)
  *  @param keyPair curve25519 32-byte key pair.
  *
  *  @return The ed25519 64-bytes signature.
@@ -27,7 +29,7 @@
  *
  *  @param signature ed25519 64-byte signature.
  *  @param pubKey    public key of the signer.
- *  @param data      data to be checked against the signature.
+ *  @param data      data to be checked against the signature. ([1,256] bytes)
  *
  *  @return Returns TRUE if the signature is valid, false if it's not.
  */

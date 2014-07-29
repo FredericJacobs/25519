@@ -22,12 +22,12 @@
 @interface Curve25519 : NSObject
 
 /**
- *  Generate a shared secret from a public key and a key pair using curve25519.
+ *  Generate a 32-byte shared secret from a public key and a key pair using curve25519.
  *
  *  @param theirPublicKey public curve25519 key
  *  @param keyPair        curve25519 key pair
  *
- *  @return Shared secret derived from ECDH with curve25519 public key and key pair.
+ *  @return 32-byte shared secret derived from ECDH with curve25519 public key and key pair.
  */
 
 +(NSData*) generateSharedSecretFromPublicKey:(NSData*)theirPublicKey andKeyPair:(ECKeyPair*)keyPair;
