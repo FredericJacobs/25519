@@ -21,6 +21,8 @@ void curve25519_keygen(unsigned char* curve25519_pubkey_out,
      with projective coordinates:
 
      mont_x = (ed_y + ed_z) / (ed_z - ed_y)
+
+     NOTE: ed_y=1 is converted to mont_x=0 since fe_invert is mod-exp
   */
 
   ge_scalarmult_base(&ed, curve25519_privkey_in);
@@ -57,6 +59,7 @@ int curve25519_sign(unsigned char* signature_out,
   memmove(signature_out, sigbuf, 64);
 
   /* Encode the sign bit into signature (in unused high bit of S) */
+   signature_out[63] &= 0x7F; /* bit should be zero already, but just in case */
    signature_out[63] |= sign_bit;
    return 0;
 }
@@ -83,6 +86,8 @@ int curve25519_verify(const unsigned char* signature,
 
      ed_y = (mont_x - 1) / (mont_x + 1)
 
+     NOTE: mont_x=-1 is converted to ed_y=0 since fe_invert is mod-exp
+
      Then move the sign bit into the pubkey from the signature.
   */
   fe_frombytes(mont_x, curve25519_pubkey);
@@ -94,6 +99,7 @@ int curve25519_verify(const unsigned char* signature,
   fe_tobytes(ed_pubkey, ed_y);
 
   /* Copy the sign bit, and remove it from signature */
+  ed_pubkey[31] &= 0x7F;  /* bit should be zero already, but just in case */
   ed_pubkey[31] |= (signature[63] & 0x80);
   memmove(verifybuf, signature, 64);
   verifybuf[63] &= 0x7F;
