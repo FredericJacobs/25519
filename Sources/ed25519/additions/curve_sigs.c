@@ -110,6 +110,7 @@ int curve25519_verify(const unsigned char* signature,
   /* The below call has a strange API: */
   /* verifybuf = R || S || message */
   /* verifybuf2 = internal to next call gets a copy of verifybuf, S gets 
-     replaced with pubkey for hashing, then the whole thing gets zeroized */
+     replaced with pubkey for hashing, then the whole thing gets zeroized
+     (if bad sig), or contains a copy of msg (good sig) */
   return crypto_sign_open(verifybuf2, &some_retval, verifybuf, 64 + msg_len, ed_pubkey);
 }
