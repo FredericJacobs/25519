@@ -55,7 +55,7 @@ extern int  curve25519_sign(unsigned char* signature_out, /* 64 bytes */
     
     // Generate key pair as described in https://code.google.com/p/curve25519-donna/
     memcpy(keyPair->privateKey, [[Randomness  generateRandomBytes:32] bytes], 32);
-    keyPair->privateKey[0] &= 248;
+    keyPair->privateKey[0]  &= 248;
     keyPair->privateKey[31] &= 127;
     keyPair->privateKey[31] |= 64;
     
@@ -86,7 +86,6 @@ extern int  curve25519_sign(unsigned char* signature_out, /* 64 bytes */
     unsigned char *sharedSecret = NULL;
     
     if ([theirPublicKey length] != 32) {
-        NSLog(@"Key does not contain 32 bytes");
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"The supplied public key does not contain 32 bytes" userInfo:nil];
     }
     

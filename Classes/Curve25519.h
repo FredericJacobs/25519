@@ -11,7 +11,7 @@
 #define ECCSignatureLength 64
 
 @interface ECKeyPair : NSObject<NSCoding> {
-    uint8_t publicKey[ECCKeyLength];
+    uint8_t publicKey [ECCKeyLength];
     uint8_t privateKey[ECCKeyLength];
 }
 
@@ -30,7 +30,7 @@
  *  @return 32-byte shared secret derived from ECDH with curve25519 public key and key pair.
  */
 
-+(NSData*) generateSharedSecretFromPublicKey:(NSData*)theirPublicKey andKeyPair:(ECKeyPair*)keyPair;
++ (NSData*)generateSharedSecretFromPublicKey:(NSData*)theirPublicKey andKeyPair:(ECKeyPair*)keyPair;
 
 /**
  *  Generate a curve25519 key pair
@@ -38,6 +38,6 @@
  *  @return curve25519 key pair.
  */
 
-+(ECKeyPair*)generateKeyPair;
++ (ECKeyPair*)generateKeyPair;
 
 @end

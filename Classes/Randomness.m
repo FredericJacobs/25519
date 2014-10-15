@@ -10,7 +10,7 @@
 
 @implementation Randomness
 
-+(NSMutableData*) generateRandomBytes:(int)numberBytes {
++(NSData*) generateRandomBytes:(int)numberBytes {
     /* used to generate db master key, and to generate signaling key, both at install */
     NSMutableData* randomBytes = [NSMutableData dataWithLength:numberBytes];
     int err = 0;
