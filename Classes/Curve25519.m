@@ -22,6 +22,10 @@ extern int  curve25519_sign(unsigned char* signature_out, /* 64 bytes */
 
 @implementation ECKeyPair
 
++ (BOOL)supportsSecureCoding{
+    return YES;
+}
+
 -(void)encodeWithCoder:(NSCoder *)coder {
     [coder encodeBytes:self->publicKey length:ECCKeyLength forKey:TSECKeyPairPublicKey];
     [coder encodeBytes:self->privateKey length:ECCKeyLength forKey:TSECKeyPairPrivateKey];

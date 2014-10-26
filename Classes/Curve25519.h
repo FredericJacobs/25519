@@ -10,7 +10,7 @@
 #define ECCKeyLength 32
 #define ECCSignatureLength 64
 
-@interface ECKeyPair : NSObject<NSCoding> {
+@interface ECKeyPair : NSObject <NSSecureCoding> {
     uint8_t publicKey [ECCKeyLength];
     uint8_t privateKey[ECCKeyLength];
 }
