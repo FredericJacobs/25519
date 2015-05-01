@@ -25,10 +25,6 @@ extern int curve25519_verify(const unsigned char* signature, /* 64 bytes */
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Data needs to be at least one byte" userInfo:nil];
     }
     
-    if ([data length] > ED25519_SIGN_MAX) {
-        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Data is too large for the signing function" userInfo:nil];
-    }
-    
     return [keyPair sign:data];
 }
 
@@ -36,10 +32,6 @@ extern int curve25519_verify(const unsigned char* signature, /* 64 bytes */
     
     if ([data length] < 1) {
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Data needs to be at least one byte" userInfo:nil];
-    }
-
-    if ([data length] > ED25519_SIGN_MAX) {
-        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Data is too large for the verification function" userInfo:nil];
     }
     
     if ([pubKey length] != ECCKeyLength) {

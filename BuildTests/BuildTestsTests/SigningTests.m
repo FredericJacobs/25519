@@ -29,7 +29,7 @@
 }
 
 - (void)testingRandom{
-    for (int i = 1; i < 256; i++) {
+    for (int i = 1; i < 1000; i++) {
         for (int j = 0; j < 3; j++) {
             
             ECKeyPair *key = [Curve25519 generateKeyPair];
