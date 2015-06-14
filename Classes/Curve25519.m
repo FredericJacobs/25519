@@ -94,13 +94,19 @@ extern int  curve25519_sign(unsigned char* signature_out, /* 64 bytes */
     }
     
     sharedSecret = malloc(32);
+    
     if (sharedSecret == NULL) {
+        free(sharedSecret);
         return nil;
     }
     
     curve25519_donna(sharedSecret,self->privateKey, [theirPublicKey bytes]);
     
-    return [NSData dataWithBytes:sharedSecret length:32];
+    NSData *sharedSecretData = [NSData dataWithBytes:sharedSecret length:32];
+    
+    free(sharedSecret);
+    
+    return sharedSecretData;
 }
 
 @end

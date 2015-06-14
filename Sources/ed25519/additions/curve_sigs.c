@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdlib.h>
 #include "ge.h"
 #include "curve_sigs.h"
 #include "crypto_sign.h"
@@ -125,13 +126,13 @@ int curve25519_verify(const unsigned char* signature,
 
   err:
 
-//  if (verifybuf != NULL) {
-//    free(verifybuf);
-//  }
-//
-//  if (verifybuf2 != NULL) {
-//    free(verifybuf2);
-//  }
+  if (verifybuf != NULL) {
+    free(verifybuf);
+  }
+
+  if (verifybuf2 != NULL) {
+    free(verifybuf2);
+  }
 
   return result;
 }
