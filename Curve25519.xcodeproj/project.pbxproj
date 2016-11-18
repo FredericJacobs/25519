@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F7C154B1DDDA59500529703 /* Curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15491DDDA59500529703 /* Curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F6D63BD1DDF447C001C8D2C /* Curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C16251DDDA6B400529703 /* Curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F7C154B1DDDA59500529703 /* Curve25519-header.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15491DDDA59500529703 /* Curve25519-header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F7C16161DDDA5D500529703 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7C16151DDDA5D500529703 /* Security.framework */; };
 		9F7C162D1DDDA6B400529703 /* Ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C16271DDDA6B400529703 /* Ed25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F7C162F1DDDA6B400529703 /* Randomness.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C16291DDDA6B400529703 /* Randomness.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,7 +87,7 @@
 
 /* Begin PBXFileReference section */
 		9F7C15461DDDA59500529703 /* Curve25519.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Curve25519.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F7C15491DDDA59500529703 /* Curve25519.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Curve25519.h; sourceTree = "<group>"; };
+		9F7C15491DDDA59500529703 /* Curve25519-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Curve25519-header.h"; sourceTree = "<group>"; };
 		9F7C154A1DDDA59500529703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F7C15531DDDA5B100529703 /* curve25519-donna.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "curve25519-donna.c"; sourceTree = "<group>"; };
 		9F7C15561DDDA5B100529703 /* compare.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compare.c; sourceTree = "<group>"; };
@@ -208,7 +209,7 @@
 			children = (
 				9F7C16241DDDA6B400529703 /* Classes */,
 				9F7C15511DDDA5B100529703 /* Sources */,
-				9F7C15491DDDA59500529703 /* Curve25519.h */,
+				9F7C15491DDDA59500529703 /* Curve25519-header.h */,
 				9F7C154A1DDDA59500529703 /* Info.plist */,
 			);
 			path = Curve25519;
@@ -374,9 +375,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7C154B1DDDA59500529703 /* Curve25519-header.h in Headers */,
+				9F6D63BD1DDF447C001C8D2C /* Curve25519.h in Headers */,
 				9F7C162D1DDDA6B400529703 /* Ed25519.h in Headers */,
 				9F7C162F1DDDA6B400529703 /* Randomness.h in Headers */,
-				9F7C154B1DDDA59500529703 /* Curve25519.h in Headers */,
 				9F7C16311DDDA8CA00529703 /* api.h in Headers */,
 				9F7C16321DDDA8CA00529703 /* base.h in Headers */,
 				9F7C16331DDDA8CA00529703 /* base2.h in Headers */,
