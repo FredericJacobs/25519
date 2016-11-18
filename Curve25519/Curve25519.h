@@ -18,4 +18,6 @@ FOUNDATION_EXPORT const unsigned char Curve25519VersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Curve25519/PublicHeader.h>
 
-
+#import <Curve25519/Curve25519.h>
+#import <Curve25519/Ed25519.h>
+#import <Curve25519/Randomness.h>
