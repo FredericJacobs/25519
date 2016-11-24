@@ -7,82 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F23575F1DE73B90001C8C22 /* Curve25519.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C16261DDDA6B400529703 /* Curve25519.m */; };
+		9F2357601DE73B92001C8C22 /* Ed25519.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C16281DDDA6B400529703 /* Ed25519.m */; };
+		9F2357611DE73B93001C8C22 /* Randomness.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C162A1DDDA6B400529703 /* Randomness.m */; };
+		9F2357621DE73BB3001C8C22 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15531DDDA5B100529703 /* curve25519-donna.c */; };
+		9F2357631DE73BB3001C8C22 /* compare.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15561DDDA5B100529703 /* compare.c */; };
+		9F2357641DE73BB3001C8C22 /* curve_sigs.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15591DDDA5B100529703 /* curve_sigs.c */; };
+		9F2357651DE73BB3001C8C22 /* sign_modified.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C155B1DDDA5B100529703 /* sign_modified.c */; };
+		9F2357661DE73BB3001C8C22 /* zeroize.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C155C1DDDA5B100529703 /* zeroize.c */; };
+		9F2357671DE73BB3001C8C22 /* fe_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15641DDDA5B100529703 /* fe_0.c */; };
+		9F2357681DE73BB3001C8C22 /* fe_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15651DDDA5B100529703 /* fe_1.c */; };
+		9F2357691DE73BB3001C8C22 /* fe_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15661DDDA5B100529703 /* fe_add.c */; };
+		9F23576A1DE73BB3001C8C22 /* fe_cmov.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15671DDDA5B100529703 /* fe_cmov.c */; };
+		9F23576B1DE73BB3001C8C22 /* fe_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15681DDDA5B100529703 /* fe_copy.c */; };
+		9F23576C1DE73BB3001C8C22 /* fe_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15691DDDA5B100529703 /* fe_frombytes.c */; };
+		9F23576D1DE73BB3001C8C22 /* fe_invert.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156A1DDDA5B100529703 /* fe_invert.c */; };
+		9F23576E1DE73BB3001C8C22 /* fe_isnegative.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156B1DDDA5B100529703 /* fe_isnegative.c */; };
+		9F23576F1DE73BB3001C8C22 /* fe_isnonzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156C1DDDA5B100529703 /* fe_isnonzero.c */; };
+		9F2357701DE73BB3001C8C22 /* fe_mul.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156D1DDDA5B100529703 /* fe_mul.c */; };
+		9F2357711DE73BB3001C8C22 /* fe_neg.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156E1DDDA5B100529703 /* fe_neg.c */; };
+		9F2357721DE73BB3001C8C22 /* fe_pow22523.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156F1DDDA5B100529703 /* fe_pow22523.c */; };
+		9F2357731DE73BB3001C8C22 /* fe_sq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15701DDDA5B100529703 /* fe_sq.c */; };
+		9F2357741DE73BB3001C8C22 /* fe_sq2.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15711DDDA5B100529703 /* fe_sq2.c */; };
+		9F2357751DE73BB3001C8C22 /* fe_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15721DDDA5B100529703 /* fe_sub.c */; };
+		9F2357761DE73BB3001C8C22 /* fe_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15731DDDA5B100529703 /* fe_tobytes.c */; };
+		9F2357771DE73BB3001C8C22 /* ge_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15751DDDA5B100529703 /* ge_add.c */; };
+		9F2357781DE73BB3001C8C22 /* ge_double_scalarmult.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15771DDDA5B100529703 /* ge_double_scalarmult.c */; };
+		9F2357791DE73BB3001C8C22 /* ge_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15781DDDA5B100529703 /* ge_frombytes.c */; };
+		9F23577A1DE73BB3001C8C22 /* ge_madd.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15791DDDA5B100529703 /* ge_madd.c */; };
+		9F23577B1DE73BB3001C8C22 /* ge_msub.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C157B1DDDA5B100529703 /* ge_msub.c */; };
+		9F23577C1DE73BB3001C8C22 /* ge_p1p1_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C157D1DDDA5B100529703 /* ge_p1p1_to_p2.c */; };
+		9F23577D1DE73BB3001C8C22 /* ge_p1p1_to_p3.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C157E1DDDA5B100529703 /* ge_p1p1_to_p3.c */; };
+		9F23577E1DE73BB3001C8C22 /* ge_p2_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C157F1DDDA5B100529703 /* ge_p2_0.c */; };
+		9F23577F1DE73BB3001C8C22 /* ge_p2_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15801DDDA5B100529703 /* ge_p2_dbl.c */; };
+		9F2357801DE73BB3001C8C22 /* ge_p3_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15821DDDA5B100529703 /* ge_p3_0.c */; };
+		9F2357811DE73BB3001C8C22 /* ge_p3_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15831DDDA5B100529703 /* ge_p3_dbl.c */; };
+		9F2357821DE73BB3001C8C22 /* ge_p3_to_cached.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15841DDDA5B100529703 /* ge_p3_to_cached.c */; };
+		9F2357831DE73BB3001C8C22 /* ge_p3_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15851DDDA5B100529703 /* ge_p3_to_p2.c */; };
+		9F2357841DE73BB3001C8C22 /* ge_p3_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15861DDDA5B100529703 /* ge_p3_tobytes.c */; };
+		9F2357851DE73BB3001C8C22 /* ge_precomp_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15871DDDA5B100529703 /* ge_precomp_0.c */; };
+		9F2357861DE73BB3001C8C22 /* ge_scalarmult_base.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15881DDDA5B100529703 /* ge_scalarmult_base.c */; };
+		9F2357871DE73BB3001C8C22 /* ge_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15891DDDA5B100529703 /* ge_sub.c */; };
+		9F2357881DE73BB3001C8C22 /* ge_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C158B1DDDA5B100529703 /* ge_tobytes.c */; };
+		9F2357891DE73BB3001C8C22 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15951DDDA5B100529703 /* blocks.c */; };
+		9F23578A1DE73BB3001C8C22 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15961DDDA5B100529703 /* hash.c */; };
+		9F23578B1DE73BB3001C8C22 /* open.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15971DDDA5B100529703 /* open.c */; };
+		9F23578C1DE73BB3001C8C22 /* sc_muladd.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C159B1DDDA5B100529703 /* sc_muladd.c */; };
+		9F23578D1DE73BB3001C8C22 /* sc_reduce.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C159C1DDDA5B100529703 /* sc_reduce.c */; };
+		9F23578E1DE73BB3001C8C22 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15A31DDDA5B100529703 /* sign.c */; };
 		9F6D63BD1DDF447C001C8D2C /* Curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C16251DDDA6B400529703 /* Curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F7C154B1DDDA59500529703 /* Curve25519-header.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15491DDDA59500529703 /* Curve25519-header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F7C16161DDDA5D500529703 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7C16151DDDA5D500529703 /* Security.framework */; };
 		9F7C162D1DDDA6B400529703 /* Ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C16271DDDA6B400529703 /* Ed25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F7C162F1DDDA6B400529703 /* Randomness.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C16291DDDA6B400529703 /* Randomness.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F7C16311DDDA8CA00529703 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C155E1DDDA5B100529703 /* api.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16321DDDA8CA00529703 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C155F1DDDA5B100529703 /* base.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16331DDDA8CA00529703 /* base2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15601DDDA5B100529703 /* base2.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16341DDDA8CA00529703 /* d.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15611DDDA5B100529703 /* d.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16351DDDA8CA00529703 /* d2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15621DDDA5B100529703 /* d2.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16361DDDA8CA00529703 /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15631DDDA5B100529703 /* fe.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16371DDDA8CA00529703 /* ge.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15741DDDA5B100529703 /* ge.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16381DDDA8CA00529703 /* ge_add.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15761DDDA5B100529703 /* ge_add.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16391DDDA8CA00529703 /* ge_madd.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C157A1DDDA5B100529703 /* ge_madd.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C163A1DDDA8CA00529703 /* ge_msub.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C157C1DDDA5B100529703 /* ge_msub.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C163B1DDDA8CA00529703 /* ge_p2_dbl.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15811DDDA5B100529703 /* ge_p2_dbl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C163C1DDDA8CA00529703 /* ge_sub.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C158A1DDDA5B100529703 /* ge_sub.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C163D1DDDA8D900529703 /* crypto_int32.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C158D1DDDA5B100529703 /* crypto_int32.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C163E1DDDA8D900529703 /* crypto_int64.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C158E1DDDA5B100529703 /* crypto_int64.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C163F1DDDA8D900529703 /* crypto_sign.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C158F1DDDA5B100529703 /* crypto_sign.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16401DDDA8D900529703 /* crypto_sign_edwards25519sha512batch.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15901DDDA5B100529703 /* crypto_sign_edwards25519sha512batch.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16411DDDA8D900529703 /* crypto_uint32.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15911DDDA5B100529703 /* crypto_uint32.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16421DDDA8D900529703 /* crypto_uint64.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15921DDDA5B100529703 /* crypto_uint64.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16431DDDA8D900529703 /* crypto_verify_32.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15931DDDA5B100529703 /* crypto_verify_32.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16441DDDA8E300529703 /* compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15571DDDA5B100529703 /* compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16451DDDA8E300529703 /* crypto_hash_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15581DDDA5B100529703 /* crypto_hash_sha512.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16461DDDA8E300529703 /* curve_sigs.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C155A1DDDA5B100529703 /* curve_sigs.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16471DDDA8E300529703 /* zeroize.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C155D1DDDA5B100529703 /* zeroize.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9F7C16481DDDA92000529703 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15531DDDA5B100529703 /* curve25519-donna.c */; };
-		9F7C16491DDDA93800529703 /* fe_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15641DDDA5B100529703 /* fe_0.c */; };
-		9F7C164A1DDDA93800529703 /* fe_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15651DDDA5B100529703 /* fe_1.c */; };
-		9F7C164B1DDDA93800529703 /* fe_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15661DDDA5B100529703 /* fe_add.c */; };
-		9F7C164C1DDDA93800529703 /* fe_cmov.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15671DDDA5B100529703 /* fe_cmov.c */; };
-		9F7C164D1DDDA93800529703 /* fe_copy.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15681DDDA5B100529703 /* fe_copy.c */; };
-		9F7C164E1DDDA93800529703 /* fe_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15691DDDA5B100529703 /* fe_frombytes.c */; };
-		9F7C164F1DDDA93800529703 /* fe_invert.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156A1DDDA5B100529703 /* fe_invert.c */; };
-		9F7C16501DDDA93800529703 /* fe_isnegative.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156B1DDDA5B100529703 /* fe_isnegative.c */; };
-		9F7C16511DDDA93800529703 /* fe_isnonzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156C1DDDA5B100529703 /* fe_isnonzero.c */; };
-		9F7C16521DDDA93800529703 /* fe_mul.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156D1DDDA5B100529703 /* fe_mul.c */; };
-		9F7C16531DDDA93800529703 /* fe_neg.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156E1DDDA5B100529703 /* fe_neg.c */; };
-		9F7C16541DDDA93800529703 /* fe_pow22523.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C156F1DDDA5B100529703 /* fe_pow22523.c */; };
-		9F7C16551DDDA93800529703 /* fe_sq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15701DDDA5B100529703 /* fe_sq.c */; };
-		9F7C16561DDDA93800529703 /* fe_sq2.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15711DDDA5B100529703 /* fe_sq2.c */; };
-		9F7C16571DDDA93800529703 /* fe_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15721DDDA5B100529703 /* fe_sub.c */; };
-		9F7C16581DDDA93800529703 /* fe_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15731DDDA5B100529703 /* fe_tobytes.c */; };
-		9F7C16591DDDA93800529703 /* ge_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15751DDDA5B100529703 /* ge_add.c */; };
-		9F7C165A1DDDA93800529703 /* ge_double_scalarmult.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15771DDDA5B100529703 /* ge_double_scalarmult.c */; };
-		9F7C165B1DDDA93800529703 /* ge_frombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15781DDDA5B100529703 /* ge_frombytes.c */; };
-		9F7C165C1DDDA93800529703 /* ge_madd.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15791DDDA5B100529703 /* ge_madd.c */; };
-		9F7C165D1DDDA93800529703 /* ge_msub.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C157B1DDDA5B100529703 /* ge_msub.c */; };
-		9F7C165E1DDDA93800529703 /* ge_p1p1_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C157D1DDDA5B100529703 /* ge_p1p1_to_p2.c */; };
-		9F7C165F1DDDA93800529703 /* ge_p1p1_to_p3.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C157E1DDDA5B100529703 /* ge_p1p1_to_p3.c */; };
-		9F7C16601DDDA93800529703 /* ge_p2_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C157F1DDDA5B100529703 /* ge_p2_0.c */; };
-		9F7C16611DDDA93800529703 /* ge_p2_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15801DDDA5B100529703 /* ge_p2_dbl.c */; };
-		9F7C16621DDDA93800529703 /* ge_p3_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15821DDDA5B100529703 /* ge_p3_0.c */; };
-		9F7C16631DDDA93800529703 /* ge_p3_dbl.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15831DDDA5B100529703 /* ge_p3_dbl.c */; };
-		9F7C16641DDDA93800529703 /* ge_p3_to_cached.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15841DDDA5B100529703 /* ge_p3_to_cached.c */; };
-		9F7C16651DDDA93800529703 /* ge_p3_to_p2.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15851DDDA5B100529703 /* ge_p3_to_p2.c */; };
-		9F7C16661DDDA93800529703 /* ge_p3_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15861DDDA5B100529703 /* ge_p3_tobytes.c */; };
-		9F7C16671DDDA93800529703 /* ge_precomp_0.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15871DDDA5B100529703 /* ge_precomp_0.c */; };
-		9F7C16681DDDA93800529703 /* ge_scalarmult_base.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15881DDDA5B100529703 /* ge_scalarmult_base.c */; };
-		9F7C16691DDDA93800529703 /* ge_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15891DDDA5B100529703 /* ge_sub.c */; };
-		9F7C166A1DDDA93800529703 /* ge_tobytes.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C158B1DDDA5B100529703 /* ge_tobytes.c */; };
-		9F7C166B1DDDA93800529703 /* open.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15971DDDA5B100529703 /* open.c */; };
-		9F7C166C1DDDA93800529703 /* sc_muladd.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C159B1DDDA5B100529703 /* sc_muladd.c */; };
-		9F7C166D1DDDA93800529703 /* sc_reduce.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C159C1DDDA5B100529703 /* sc_reduce.c */; };
-		9F7C166E1DDDA93800529703 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15A31DDDA5B100529703 /* sign.c */; };
-		9F7C166F1DDDA94600529703 /* compare.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15561DDDA5B100529703 /* compare.c */; };
-		9F7C16701DDDA94600529703 /* curve_sigs.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15591DDDA5B100529703 /* curve_sigs.c */; };
-		9F7C16711DDDA94600529703 /* sign_modified.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C155B1DDDA5B100529703 /* sign_modified.c */; };
-		9F7C16721DDDA94600529703 /* zeroize.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C155C1DDDA5B100529703 /* zeroize.c */; };
-		9F7C16731DDDA94F00529703 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15951DDDA5B100529703 /* blocks.c */; };
-		9F7C16741DDDA94F00529703 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C15961DDDA5B100529703 /* hash.c */; };
-		9F7C16751DDDA96F00529703 /* Curve25519.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C16261DDDA6B400529703 /* Curve25519.m */; };
-		9F7C16761DDDA96F00529703 /* Ed25519.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C16281DDDA6B400529703 /* Ed25519.m */; };
-		9F7C16771DDDA96F00529703 /* Randomness.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C162A1DDDA6B400529703 /* Randomness.m */; };
+		9F7C16311DDDA8CA00529703 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C155E1DDDA5B100529703 /* api.h */; };
+		9F7C16321DDDA8CA00529703 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C155F1DDDA5B100529703 /* base.h */; };
+		9F7C16331DDDA8CA00529703 /* base2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15601DDDA5B100529703 /* base2.h */; };
+		9F7C16341DDDA8CA00529703 /* d.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15611DDDA5B100529703 /* d.h */; };
+		9F7C16351DDDA8CA00529703 /* d2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15621DDDA5B100529703 /* d2.h */; };
+		9F7C16361DDDA8CA00529703 /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15631DDDA5B100529703 /* fe.h */; };
+		9F7C16371DDDA8CA00529703 /* ge.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15741DDDA5B100529703 /* ge.h */; };
+		9F7C16381DDDA8CA00529703 /* ge_add.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15761DDDA5B100529703 /* ge_add.h */; };
+		9F7C16391DDDA8CA00529703 /* ge_madd.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C157A1DDDA5B100529703 /* ge_madd.h */; };
+		9F7C163A1DDDA8CA00529703 /* ge_msub.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C157C1DDDA5B100529703 /* ge_msub.h */; };
+		9F7C163B1DDDA8CA00529703 /* ge_p2_dbl.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15811DDDA5B100529703 /* ge_p2_dbl.h */; };
+		9F7C163C1DDDA8CA00529703 /* ge_sub.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C158A1DDDA5B100529703 /* ge_sub.h */; };
+		9F7C163D1DDDA8D900529703 /* crypto_int32.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C158D1DDDA5B100529703 /* crypto_int32.h */; };
+		9F7C163E1DDDA8D900529703 /* crypto_int64.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C158E1DDDA5B100529703 /* crypto_int64.h */; };
+		9F7C163F1DDDA8D900529703 /* crypto_sign.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C158F1DDDA5B100529703 /* crypto_sign.h */; };
+		9F7C16401DDDA8D900529703 /* crypto_sign_edwards25519sha512batch.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15901DDDA5B100529703 /* crypto_sign_edwards25519sha512batch.h */; };
+		9F7C16411DDDA8D900529703 /* crypto_uint32.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15911DDDA5B100529703 /* crypto_uint32.h */; };
+		9F7C16421DDDA8D900529703 /* crypto_uint64.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15921DDDA5B100529703 /* crypto_uint64.h */; };
+		9F7C16431DDDA8D900529703 /* crypto_verify_32.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15931DDDA5B100529703 /* crypto_verify_32.h */; };
+		9F7C16441DDDA8E300529703 /* compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15571DDDA5B100529703 /* compare.h */; };
+		9F7C16451DDDA8E300529703 /* crypto_hash_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C15581DDDA5B100529703 /* crypto_hash_sha512.h */; };
+		9F7C16461DDDA8E300529703 /* curve_sigs.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C155A1DDDA5B100529703 /* curve_sigs.h */; };
+		9F7C16471DDDA8E300529703 /* zeroize.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F7C155D1DDDA5B100529703 /* zeroize.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -474,54 +474,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7C16751DDDA96F00529703 /* Curve25519.m in Sources */,
-				9F7C16761DDDA96F00529703 /* Ed25519.m in Sources */,
-				9F7C16771DDDA96F00529703 /* Randomness.m in Sources */,
-				9F7C16481DDDA92000529703 /* curve25519-donna.c in Sources */,
-				9F7C16491DDDA93800529703 /* fe_0.c in Sources */,
-				9F7C166F1DDDA94600529703 /* compare.c in Sources */,
-				9F7C16701DDDA94600529703 /* curve_sigs.c in Sources */,
-				9F7C16711DDDA94600529703 /* sign_modified.c in Sources */,
-				9F7C16721DDDA94600529703 /* zeroize.c in Sources */,
-				9F7C164A1DDDA93800529703 /* fe_1.c in Sources */,
-				9F7C164B1DDDA93800529703 /* fe_add.c in Sources */,
-				9F7C164C1DDDA93800529703 /* fe_cmov.c in Sources */,
-				9F7C164D1DDDA93800529703 /* fe_copy.c in Sources */,
-				9F7C164E1DDDA93800529703 /* fe_frombytes.c in Sources */,
-				9F7C164F1DDDA93800529703 /* fe_invert.c in Sources */,
-				9F7C16501DDDA93800529703 /* fe_isnegative.c in Sources */,
-				9F7C16511DDDA93800529703 /* fe_isnonzero.c in Sources */,
-				9F7C16521DDDA93800529703 /* fe_mul.c in Sources */,
-				9F7C16531DDDA93800529703 /* fe_neg.c in Sources */,
-				9F7C16541DDDA93800529703 /* fe_pow22523.c in Sources */,
-				9F7C16551DDDA93800529703 /* fe_sq.c in Sources */,
-				9F7C16561DDDA93800529703 /* fe_sq2.c in Sources */,
-				9F7C16571DDDA93800529703 /* fe_sub.c in Sources */,
-				9F7C16581DDDA93800529703 /* fe_tobytes.c in Sources */,
-				9F7C16591DDDA93800529703 /* ge_add.c in Sources */,
-				9F7C165A1DDDA93800529703 /* ge_double_scalarmult.c in Sources */,
-				9F7C16731DDDA94F00529703 /* blocks.c in Sources */,
-				9F7C16741DDDA94F00529703 /* hash.c in Sources */,
-				9F7C165B1DDDA93800529703 /* ge_frombytes.c in Sources */,
-				9F7C165C1DDDA93800529703 /* ge_madd.c in Sources */,
-				9F7C165D1DDDA93800529703 /* ge_msub.c in Sources */,
-				9F7C165E1DDDA93800529703 /* ge_p1p1_to_p2.c in Sources */,
-				9F7C165F1DDDA93800529703 /* ge_p1p1_to_p3.c in Sources */,
-				9F7C16601DDDA93800529703 /* ge_p2_0.c in Sources */,
-				9F7C16611DDDA93800529703 /* ge_p2_dbl.c in Sources */,
-				9F7C16621DDDA93800529703 /* ge_p3_0.c in Sources */,
-				9F7C16631DDDA93800529703 /* ge_p3_dbl.c in Sources */,
-				9F7C16641DDDA93800529703 /* ge_p3_to_cached.c in Sources */,
-				9F7C16651DDDA93800529703 /* ge_p3_to_p2.c in Sources */,
-				9F7C16661DDDA93800529703 /* ge_p3_tobytes.c in Sources */,
-				9F7C16671DDDA93800529703 /* ge_precomp_0.c in Sources */,
-				9F7C16681DDDA93800529703 /* ge_scalarmult_base.c in Sources */,
-				9F7C16691DDDA93800529703 /* ge_sub.c in Sources */,
-				9F7C166A1DDDA93800529703 /* ge_tobytes.c in Sources */,
-				9F7C166B1DDDA93800529703 /* open.c in Sources */,
-				9F7C166C1DDDA93800529703 /* sc_muladd.c in Sources */,
-				9F7C166D1DDDA93800529703 /* sc_reduce.c in Sources */,
-				9F7C166E1DDDA93800529703 /* sign.c in Sources */,
+				9F23575F1DE73B90001C8C22 /* Curve25519.m in Sources */,
+				9F2357601DE73B92001C8C22 /* Ed25519.m in Sources */,
+				9F2357611DE73B93001C8C22 /* Randomness.m in Sources */,
+				9F2357621DE73BB3001C8C22 /* curve25519-donna.c in Sources */,
+				9F2357631DE73BB3001C8C22 /* compare.c in Sources */,
+				9F2357641DE73BB3001C8C22 /* curve_sigs.c in Sources */,
+				9F2357651DE73BB3001C8C22 /* sign_modified.c in Sources */,
+				9F2357661DE73BB3001C8C22 /* zeroize.c in Sources */,
+				9F2357671DE73BB3001C8C22 /* fe_0.c in Sources */,
+				9F2357681DE73BB3001C8C22 /* fe_1.c in Sources */,
+				9F2357691DE73BB3001C8C22 /* fe_add.c in Sources */,
+				9F23576A1DE73BB3001C8C22 /* fe_cmov.c in Sources */,
+				9F23576B1DE73BB3001C8C22 /* fe_copy.c in Sources */,
+				9F23576C1DE73BB3001C8C22 /* fe_frombytes.c in Sources */,
+				9F23576D1DE73BB3001C8C22 /* fe_invert.c in Sources */,
+				9F23576E1DE73BB3001C8C22 /* fe_isnegative.c in Sources */,
+				9F23576F1DE73BB3001C8C22 /* fe_isnonzero.c in Sources */,
+				9F2357701DE73BB3001C8C22 /* fe_mul.c in Sources */,
+				9F2357711DE73BB3001C8C22 /* fe_neg.c in Sources */,
+				9F2357721DE73BB3001C8C22 /* fe_pow22523.c in Sources */,
+				9F2357731DE73BB3001C8C22 /* fe_sq.c in Sources */,
+				9F2357741DE73BB3001C8C22 /* fe_sq2.c in Sources */,
+				9F2357751DE73BB3001C8C22 /* fe_sub.c in Sources */,
+				9F2357761DE73BB3001C8C22 /* fe_tobytes.c in Sources */,
+				9F2357771DE73BB3001C8C22 /* ge_add.c in Sources */,
+				9F2357781DE73BB3001C8C22 /* ge_double_scalarmult.c in Sources */,
+				9F2357791DE73BB3001C8C22 /* ge_frombytes.c in Sources */,
+				9F23577A1DE73BB3001C8C22 /* ge_madd.c in Sources */,
+				9F23577B1DE73BB3001C8C22 /* ge_msub.c in Sources */,
+				9F23577C1DE73BB3001C8C22 /* ge_p1p1_to_p2.c in Sources */,
+				9F23577D1DE73BB3001C8C22 /* ge_p1p1_to_p3.c in Sources */,
+				9F23577E1DE73BB3001C8C22 /* ge_p2_0.c in Sources */,
+				9F23577F1DE73BB3001C8C22 /* ge_p2_dbl.c in Sources */,
+				9F2357801DE73BB3001C8C22 /* ge_p3_0.c in Sources */,
+				9F2357811DE73BB3001C8C22 /* ge_p3_dbl.c in Sources */,
+				9F2357821DE73BB3001C8C22 /* ge_p3_to_cached.c in Sources */,
+				9F2357831DE73BB3001C8C22 /* ge_p3_to_p2.c in Sources */,
+				9F2357841DE73BB3001C8C22 /* ge_p3_tobytes.c in Sources */,
+				9F2357851DE73BB3001C8C22 /* ge_precomp_0.c in Sources */,
+				9F2357861DE73BB3001C8C22 /* ge_scalarmult_base.c in Sources */,
+				9F2357871DE73BB3001C8C22 /* ge_sub.c in Sources */,
+				9F2357881DE73BB3001C8C22 /* ge_tobytes.c in Sources */,
+				9F2357891DE73BB3001C8C22 /* blocks.c in Sources */,
+				9F23578A1DE73BB3001C8C22 /* hash.c in Sources */,
+				9F23578B1DE73BB3001C8C22 /* open.c in Sources */,
+				9F23578C1DE73BB3001C8C22 /* sc_muladd.c in Sources */,
+				9F23578D1DE73BB3001C8C22 /* sc_reduce.c in Sources */,
+				9F23578E1DE73BB3001C8C22 /* sign.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
