@@ -8,3 +8,9 @@
 
 
 *.xcuserstate
+
+/fastlane/Appfile
+/fastlane/README.md
+/fastlane/report.xml
+
+/.bundle
