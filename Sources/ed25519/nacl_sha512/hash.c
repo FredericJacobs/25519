@@ -40,7 +40,7 @@ int crypto_hash_sha512(unsigned char *out,const unsigned char *in,unsigned long 
   padded[inlen] = 0x80;
 
   if (inlen < 112) {
-    for (i = inlen + 1;i < 119;++i) padded[i] = 0;
+    for (i = (int) inlen + 1;i < 119;++i) padded[i] = 0;
     padded[119] = bytes >> 61;
     padded[120] = bytes >> 53;
     padded[121] = bytes >> 45;
@@ -52,7 +52,7 @@ int crypto_hash_sha512(unsigned char *out,const unsigned char *in,unsigned long 
     padded[127] = bytes << 3;
     blocks(h,padded,128);
   } else {
-    for (i = inlen + 1;i < 247;++i) padded[i] = 0;
+    for (i = (int) inlen + 1;i < 247;++i) padded[i] = 0;
     padded[247] = bytes >> 61;
     padded[248] = bytes >> 53;
     padded[249] = bytes >> 45;
