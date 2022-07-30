@@ -54,5 +54,5 @@ The Curve25519 key pair and ECDH is done with [Adam Langley](https://www.imperia
 
 ## License
 
-Licensed under the GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
+Licensed under the GPLv2: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
